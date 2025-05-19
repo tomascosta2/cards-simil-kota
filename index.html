@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./global.css">
+	<!-- GSAP core -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	<!-- GSAP ScrollTrigger plugin -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+	<script>
+		window.onload = () => {
+			gsap.registerPlugin(ScrollTrigger);
+
+			let tl = gsap.timeline({
+				scrollTrigger: {
+					trigger: ".cards",
+					pin: true,
+					pinSpacing: true,
+					markers: true,
+					start: "top top",
+					end: "+=1000",
+					scrub: 1
+				}
+			});
+
+			tl.from(".card1", {
+				yPercent: 100,
+				opacity: 0
+			});
+			tl.from(".card2", {
+				yPercent: 200,
+				opacity: 0
+			});
+			tl.from(".card3", {
+				yPercent: 200,
+				opacity: 0
+			});
+		};
+	</script>
+
+</head>
+
+<body>
+
+	<div class="row">
+		<div class="col-12">
+			<div class="block_top">
+				<h1>Otras secciones</h1>
+			</div>
+
+		</div>
+	</div>
+	<div class="row cards-row">
+		<div class="col-12">
+			<div class="cards">
+				<div class="custom-card card1" style="background-color: darkcyan; z-index: 2;">
+					<h1>Slide 1</h1>
+				</div>
+				<div class="custom-card card2" style="background-color:aliceblue; z-index: 3;">
+					<h1>Slide 2</h1>
+				</div>
+				<div class="custom-card card3" style="background-color:green; z-index: 4;">
+					<h1>Slide 3</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			<div class="next_block">
+				<h1>Otras secciones</h1>
+			</div>
+		</div>
+	</div>
+	<div class="spacer"></div>
+
+</body>
+
+</html>
