@@ -1,5 +1,5 @@
 .block_top {
-  background: #213f29;
+  background: #57e47c;
   height: 400px;
   color: #fff;
   display: flex;
@@ -10,7 +10,7 @@
   border-radius: 50px;
 }
 .next_block {
-  background: #213f29;
+  background: #57e47c;
   height: 400px;
   color: #fff;
   display: flex;
@@ -38,4 +38,10 @@
 .cards {
   height: 100vh;
   border: solid 2px red;
+}
+
+.cards-section-title {
+	position: absolute;
+	text-align: center;
+	width: 100%;
 }
